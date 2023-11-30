@@ -1,13 +1,25 @@
+# Python exclusives
 __pycache__
 .ipynb_checkpoints
 .idea
 
+# Executables
 *.exe
 *.o
 *.out
 *.pyc
 *.pyd
 
+# Local and secret files
+*.env
+commands.txt
+
+# Build directory
 build
+
+# Project directories
 .venv
 .vscode
+
+# Dataset directory
+data
