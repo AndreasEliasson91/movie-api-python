@@ -2,11 +2,20 @@ FROM python:alpine
 
 WORKDIR /app
 
-RUN python -m venv /opt/venv
+ARG MONGODB_URL
+ARG DB_NAME
+
+ENV MONGODB_URL=$db_url
+ENV DB_NAME=$db_name
+
+COPY .env /app/.env
+
+RUN python3 -m venv /opt/venv
 ENV PATH="/opt/venv/bin:$PATH"
 
 COPY requirements.txt requirements.txt
-RUN pip install --only-binary :all: -r requirements.txt
+RUN  python3 -m pip install --upgrade pip && \
+     python3 -m pip install -r requirements.txt
 
 COPY . .
 
