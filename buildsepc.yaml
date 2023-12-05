@@ -1,0 +1,11 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+  build:
+    commands:
+      # - go test
+      - docker build -t git.systementor.se/andreas.eliasson/UrbanLegendsPythonAPI .
+      - docker login -u andreas.eliasson -p yacloud1 https://git.systementor.se
+      - docker push git.systementor.se/andreas.eliasson/UrbanLegendsPythonAPI
