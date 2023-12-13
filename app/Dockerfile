@@ -2,12 +2,6 @@ FROM python:alpine
 
 WORKDIR /app
 
-# ARG MONGODB_URL
-# ARG DB_NAME
-
-# ENV MONGODB_URL=$MONGODB_URL
-# ENV DB_NAME=$DB_NAME
-
 COPY .env /app/.env
 
 RUN python3 -m venv /opt/venv
@@ -21,4 +15,4 @@ COPY . .
 
 EXPOSE 8000
 
-CMD [ "uvicorn", "app:app", "--reload", "--host=0.0.0.0" ]
+CMD [ "uvicorn", "main:app", "--reload", "--host=0.0.0.0" ]
