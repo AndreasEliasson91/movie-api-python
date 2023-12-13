@@ -5,7 +5,7 @@ phases:
     commands:
   build:
     commands:
-      # - go test
+      - pytest
       - docker build -t git.systementor.se/andreas.eliasson/urbanlegends-pythonapi ./app
       - docker login -u andreas.eliasson -p yacloud1 https://git.systementor.se
       - docker push git.systementor.se/andreas.eliasson/urbanlegends-pythonapi

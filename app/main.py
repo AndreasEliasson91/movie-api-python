@@ -1,12 +1,8 @@
 import os
-import sys
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from bson import ObjectId
 from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException
-from motor.motor_asyncio import AsyncIOMotorClient
-
 from app.db.model import Legend, LegendCollection
 from app.db.connect import get_database
 
