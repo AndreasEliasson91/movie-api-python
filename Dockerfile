@@ -15,4 +15,4 @@ COPY . .
 
 EXPOSE 8000
 
-CMD [ "uvicorn", "main:app", "--reload", "--host=0.0.0.0" ]
+CMD [ "uvicorn", "app.main:app", "--reload", "--host=0.0.0.0" ]
