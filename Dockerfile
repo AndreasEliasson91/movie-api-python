@@ -2,8 +2,6 @@ FROM python:3.10-alpine
 
 WORKDIR /app
 
-# COPY .env /app/.env
-
 RUN python3 -m venv /opt/venv
 ENV PATH="/opt/venv/bin:$PATH"
 
