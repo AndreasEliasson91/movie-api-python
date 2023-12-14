@@ -10,9 +10,7 @@ phases:
       - pip3 install -r requirements.txt
   build:
     commands:
-      - echo Running tests
       - pytest
-      - echo Build & Push Docker image
       - docker build -t git.systementor.se/andreas.eliasson/urbanlegends-pythonapi .
       - docker login -u andreas.eliasson -p yacloud1 https://git.systementor.se
       - docker push git.systementor.se/andreas.eliasson/urbanlegends-pythonapi
