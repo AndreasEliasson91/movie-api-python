@@ -6,7 +6,7 @@ from fastapi import FastAPI, HTTPException
 from app.db.model import Legend, LegendCollection
 from app.db.connect import get_database
 
-if os.environ('ENVIRONMENT') == 'development':
+if os.environ['ENVIRONMENT'] == 'development':
     load_dotenv()
 
 
